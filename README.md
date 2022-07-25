@@ -50,5 +50,9 @@ de esta manera no podrian pasarnos por alto algun metodo de inyeccion
 virtualenv .venv
 source .venv/bin/activate
 python3 server.py
+
+
+pruebas unitarias
+pytest ./tests -vvv
 ```
 
