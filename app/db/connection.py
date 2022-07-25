@@ -1,6 +1,6 @@
 import pymysql.cursors
 import pymysql
-from constants.db import params
+from app.constants.db import params
 
 
 class Connection:

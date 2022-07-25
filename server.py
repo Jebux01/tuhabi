@@ -2,11 +2,11 @@ from http.server import BaseHTTPRequestHandler, HTTPServer
 from urllib import parse
 import json
 
-from services.estates_services import get_estates
-from utils.validates import valid_params_and_values
+from app.services.estates_services import get_estates
+from app.utils.validates import valid_params_and_values
 
 GET_METHODS = {}
-PORT = 8000
+PORT = 8001
 
 def router(route_map, methods=["GET"]):
     def route_enclouse(f):

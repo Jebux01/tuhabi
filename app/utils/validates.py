@@ -1,5 +1,5 @@
 from typing import Dict
-from constants.params import params as params_filters
+from app.constants.params import params as params_filters
 
 def valid_params_and_values(params: Dict):
     invalids = list(
@@ -15,7 +15,11 @@ def valid_params_and_values(params: Dict):
         message = "Invalid params: " + ", ".join(invalids)
         return {"error": True, "message": message}
 
-    empty = list(filter(lambda key: len(params[key].strip()) == 0, params.keys()))
+    empty = list(
+        filter(
+            lambda key: len((str(params[key])).strip()) == 0, params.keys()
+        )
+    )
 
     if len(empty) > 0:
         message = "Empty params: " + ", ".join(empty)

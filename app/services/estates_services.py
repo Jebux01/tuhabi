@@ -1,6 +1,6 @@
 from typing import Any
-from db.connection import Connection
-from constants.params import params as params_filters
+from app.db.connection import Connection
+from app.constants.params import params as params_filters
 
 def params(f) -> Any:
     """
