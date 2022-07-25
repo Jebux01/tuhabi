@@ -1,4 +1,4 @@
-# Consumo de propiedades
+# Consumo de propiedades inmobiliarias
 ## Microservicio
 
 [![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
@@ -40,6 +40,11 @@ de esta manera no podrian pasarnos por alto algun metodo de inyeccion
 
 # Entorno Virtual
 ## Para este caso se utilizo virtualenv
+
+## Modelo Likes con entidad relacion en base de datos
+- Se creo una tabla sencilla con 4 campos, el id unico y autoincrementable, luego creado el campo "property_id" con una llave foranea para validar que la propiedad este existente en los catalogos, al igual con el campo "user_id" de la misma manera con una llave foranea para validar que le usuario exista, finalmente agregando un campo created_at para tener en registro cuando fue que se creo el like y se agrego al usuario
+
+- Optener los "likes", para este modelo se crearia una consulta con un COUNT de esta manera sabriamos cuantos "likes" tiene la propiedad e igualmente podriamos saber en que temporada fue que los usuarios tuvieron mas interaccion con la pagina.
 ## Uso 
 ```sh
 virtualenv .venv
